@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-// import logo from './logo.svg';
-// import './App.css';
 import About from './components/About';
-// import Me from './components/Me';
 import Nav from './components/Nav';
 import Gallery from './components/Gallery';
 
@@ -34,7 +31,7 @@ function App() {
       ></Nav>
       <main>
         <div>
-          <Gallery></Gallery>
+          <Gallery currentCategory={currentCategory}></Gallery>
           <About />
         </div>
       </main>
