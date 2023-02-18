@@ -12,24 +12,30 @@ const categories = [
 ]
 const mockCurrentCategory = jest.fn();
 const mockSetCurrentCategory = jest.fn();
+const mockContactSelected = jest.fn();
+const mockSetContactSelected = jest.fn();
 
 afterEach(cleanup);
 
 describe('Nav component', () => {
     // baseline test
     test('renders', () => {
-        render(<Nav 
-        categories={categories}
-        setCurrentCategory={mockSetCurrentCategory}
-        currentCategory={mockCurrentCategory}
+        render(<Nav
+            categories={categories}
+            setCurrentCategory={mockSetCurrentCategory}
+            currentCategory={mockCurrentCategory}
+            contactSelected={mockContactSelected}
+            setContactSelected={mockSetContactSelected}
         />);
     })
     // snapshot test
     test('matches snapshot', () => {
-        const { asFragment } = render(<Nav 
+        const { asFragment } = render(<Nav
             categories={categories}
             setCurrentCategory={mockSetCurrentCategory}
             currentCategory={mockCurrentCategory}
+            contactSelected={mockContactSelected}
+            setContactSelected={mockSetContactSelected}
         />);
         // assert value comparison
         expect(asFragment()).toMatchSnapshot();
@@ -38,10 +44,12 @@ describe('Nav component', () => {
 
 describe('emoji is visible', () => {
     it('inserts emoji into the h2', () => {
-        const { getByLabelText } = render(<Nav 
+        const { getByLabelText } = render(<Nav
             categories={categories}
             setCurrentCategory={mockSetCurrentCategory}
             currentCategory={mockCurrentCategory}
+            contactSelected={mockContactSelected}
+            setContactSelected={mockSetContactSelected}
         />);
 
         // eslint-disable-next-line testing-library/prefer-screen-queries
@@ -52,10 +60,12 @@ describe('emoji is visible', () => {
 describe('links are visible', () => {
     it('inserts text into the links', () => {
         // Arrange
-        const { getByTestId } = render(<Nav 
+        const { getByTestId } = render(<Nav
             categories={categories}
             setCurrentCategory={mockSetCurrentCategory}
             currentCategory={mockCurrentCategory}
+            contactSelected={mockContactSelected}
+            setContactSelected={mockSetContactSelected}
         />);
         // Assert
         expect(getByTestId('link')).toHaveTextContent('Oh Snap!');
