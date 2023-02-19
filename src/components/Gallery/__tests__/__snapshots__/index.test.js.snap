@@ -12,29 +12,31 @@ exports[`Gallery is rending matches snapshot 1`] = `
       Portraits of people in my life
     </p>
     <div>
-      <div
-        class="flex-row"
-      >
-        <img
-          alt="Cat green eyes"
-          class="img-thumbnail mx-1"
-          src="0.jpg"
-        />
-        <img
-          alt="Green parrot"
-          class="img-thumbnail mx-1"
-          src="1.jpg"
-        />
-        <img
-          alt="Yellow macaw"
-          class="img-thumbnail mx-1"
-          src="2.jpg"
-        />
-        <img
-          alt="Pug smile"
-          class="img-thumbnail mx-1"
-          src="3.jpg"
-        />
+      <div>
+        <div
+          class="flex-row"
+        >
+          <img
+            alt="Cat green eyes"
+            class="img-thumbnail mx-1"
+            src="0.jpg"
+          />
+          <img
+            alt="Green parrot"
+            class="img-thumbnail mx-1"
+            src="1.jpg"
+          />
+          <img
+            alt="Yellow macaw"
+            class="img-thumbnail mx-1"
+            src="2.jpg"
+          />
+          <img
+            alt="Pug smile"
+            class="img-thumbnail mx-1"
+            src="3.jpg"
+          />
+        </div>
       </div>
     </div>
   </section>

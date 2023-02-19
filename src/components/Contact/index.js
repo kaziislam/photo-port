@@ -4,7 +4,7 @@ import { validateEmail } from "../../utils/helpers";
 const ContactForm = () => {
     // JSX
     const [formState, setFormState] = useState({ name: '', email: '', message: '' });
-    const { name, email, message } = formState;
+    // const { name, email, message } = formState;
     const [errorMessage, setErrorMessage] = useState('');
 
     function handleChange(e) {
@@ -55,11 +55,19 @@ const ContactForm = () => {
                     <label htmlFor="message">Message:</label>
                     <textarea name="message" defaultValue={formState.message} onBlur={handleChange} rows="5" />
                 </div>
+
                 {errorMessage && (
                     <div>
                         <p className="error-text">{errorMessage}</p>
                     </div>
                 )}
+                {/* The preceding statement can be evaluated to be the same as the following expression:
+
+                if(errorMessage) {
+                <div>
+                    <p className="error-text">{errorMessage}</p>
+                </div>
+                } */}
                 <button data-testid="button" type="button">Submit</button>
             </form>
         </section>
